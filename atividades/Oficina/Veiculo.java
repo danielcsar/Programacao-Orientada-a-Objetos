@@ -36,6 +36,6 @@ public abstract class Veiculo implements Oficina {
 	
 	@Override
 	public String toString() {
-		return ("\nProprietario: "+this.proprietario+"\nModelo: "+this.modelo);
+		return ("\nProprietario: "+this.proprietario+"\nModelo: "+this.modelo+"\nValor Cobrado: "+this.getValorCobrado());
 	}
 }

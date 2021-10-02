@@ -8,12 +8,16 @@ public class TestaOficina {
 		
 		Proprietario p = new Proprietario("Daniel");
 		
-		Carro jaguar = new Carro("Jaguar XJ", LocalDate.of(2021,8, 29), p, "Sedan");
+		Carro jaguar = new Carro("Jaguar XJ", LocalDate.of(2021,8, 28), p, "Sedan");
+		Moto diavel = new Moto("Diavel Dark", LocalDate.now(), p, 1260);
 		
 		jaguar.revisao();
 		jaguar.trocarOleo();
+		diavel.lavarVeiculo();
 		
-		System.out.println(jaguar.toString());
+		
+		System.out.println(jaguar);
+		System.out.println(diavel);
 	}
 
 }

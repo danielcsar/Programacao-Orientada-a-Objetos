@@ -16,19 +16,24 @@ public class Moto extends Veiculo {
 
 	@Override
 	public double lavarVeiculo() {
-		valorCobrado += TipoServico.Lavar.getValorPorServico();
-		return valorCobrado;
+		super.valorCobrado += TipoServico.LAVAR.getValorPorServico();
+		return super.valorCobrado;
 	}
 
 	@Override
 	public double trocarOleo() {
-		valorCobrado += TipoServico.TrocaOleo.getValorPorServico();
-		return valorCobrado;
+		super.valorCobrado += TipoServico.TROCAOLEO.getValorPorServico();
+		return super.valorCobrado;
 	}
 
 	@Override
 	public double revisao() {
-		valorCobrado += TipoServico.Revisao.getValorPorServico();
-		return valorCobrado;
+		super.valorCobrado += TipoServico.REVISAO.getValorPorServico();
+		return super.valorCobrado;
+	}
+	
+	@Override
+	public String toString() {
+		return (super.toString() + "\nCilindradas: " + this.getCilindradas());
 	}
 }

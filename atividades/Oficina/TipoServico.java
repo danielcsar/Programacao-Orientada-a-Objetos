@@ -1,7 +1,7 @@
 package aula7;
 
 public enum TipoServico {
-	TrocaOleo(100), Lavar(50), Revisao(200);
+	TROCAOLEO(100), LAVAR(50), REVISAO(200);
 
 	private double valorPorServico;
 

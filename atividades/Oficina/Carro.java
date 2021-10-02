@@ -18,17 +18,17 @@ public class Carro extends Veiculo {
 
 	@Override
 	public double lavarVeiculo() {
-		valorCobrado += TipoServico.Lavar.getValorPorServico();
-		return valorCobrado;
+		super.valorCobrado += TipoServico.LAVAR.getValorPorServico();
+		return super.valorCobrado;
 	}
 
 	@Override
 	public double trocarOleo() {
 		if (this.dataConserto.getDayOfWeek().equals(DayOfWeek.SATURDAY)) {
-			valorCobrado += TipoServico.TrocaOleo.getValorPorServico() - 50;
-			return valorCobrado;
+			super.valorCobrado += TipoServico.TROCAOLEO.getValorPorServico() - 50;
+			return super.valorCobrado;
 		} else {
-			return valorCobrado;
+			return super.valorCobrado;
 		}
 
 	}
@@ -36,15 +36,15 @@ public class Carro extends Veiculo {
 	@Override
 	public double revisao() {
 		if (this.dataConserto.getMonth().equals(Month.AUGUST)) {
-			valorCobrado += TipoServico.Revisao.getValorPorServico() * 0.9;
-			return valorCobrado;
+			super.valorCobrado += TipoServico.REVISAO.getValorPorServico() * 0.9;
+			return super.valorCobrado;
 		} else {
-			return valorCobrado;
+			return super.valorCobrado;
 		}
 	}
 
 	@Override
 	public String toString() {
-		return (super.toString() + "\nCategoria: " + this.categoria + "\nValor Total: " + this.getValorCobrado());
+		return (super.toString() + "\nCategoria: " + this.getCategoria());
 	}
 }
