@@ -31,6 +31,9 @@ public class Endereco {
 	}
 
 	public String toString() {
-		return (this.getRua() + "\nBairro: " + this.getBairro() + "\nCEP: " + this.getCep() + "\n" + this.getCidade());
+		return (this.getRua() + "\nBairro: " + 
+				this.getBairro() + "\nCEP: " + 
+				this.getCep() + "\n" + 
+				this.getCidade());
 	}
 }

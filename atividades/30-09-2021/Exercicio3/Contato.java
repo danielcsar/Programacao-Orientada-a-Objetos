@@ -33,12 +33,14 @@ public class Contato {
 
 	public void mostrarTelefones() {
 		System.out.println("Telefones: ");
-		for (Telefone t : telefones) {
+		for (Telefone t : telefones) {			
 			System.out.println(t.getNumero());
 		}
 	}
 
 	public String toString() {
-		return ("Nome: " + this.getNome() + "\nEndereço: " + this.getEndereco());
+		return ("Nome: " + this.getNome() + 
+				"\nEndereço: " + this.getEndereco()+ 
+				"\nTelefones: " + this.getTelefones());
 	}
 }

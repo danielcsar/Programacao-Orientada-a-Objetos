@@ -23,10 +23,9 @@ public class Program {
 		cont1.setTelefones(t2);
 		cont2.setTelefones(t3);
 
-		System.out.println(cont1.toString());
-		cont1.mostrarTelefones();
-		System.out.println("\n" + cont2.toString());
-		cont2.mostrarTelefones();
+		System.out.println(cont1);
+		//cont1.mostrarTelefones();
+		System.out.println("\n" + cont2);
+		//cont2.mostrarTelefones();
 	}
-
 }

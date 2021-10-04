@@ -19,6 +19,7 @@ public class Estado {
 	}
 
 	public String toString() {
-		return ("Estado: " + this.getNomeEstado() + "\nUF: " + this.getSigla());
+		return ("Estado: " + this.getNomeEstado() + 
+				"\nUF: " + this.getSigla());
 	}
 }

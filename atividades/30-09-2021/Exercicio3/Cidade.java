@@ -19,6 +19,7 @@ public class Cidade {
 	}
 
 	public String toString() {
-		return ("Cidade: " + this.getNomeCidade() + "\n" + this.getEstado());
+		return ("Cidade: " + this.getNomeCidade() + 
+				"\n" + this.getEstado());
 	}
 }
