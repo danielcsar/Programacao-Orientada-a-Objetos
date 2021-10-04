@@ -6,14 +6,19 @@ public class TestaPlano {
 		Clinica c = new Clinica("LexCorp", "Saude LTDA", "2021RJ");
 		Medico m = new Medico("LexCorp", "Dr. Luiz", 1234);
 		Anestesista a = new Anestesista("LexCorp", "Dra. Luiza", 56789,"Anestesia Geral");
-		
+		ControlePagamento cp = new ControlePagamento();
+			
 		c.calcularPagamento();
 		m.calcularPagamento();
 		a.calcularPagamento();
-		
+		cp.calculaTotalPago(c);
+		cp.calculaTotalPago(m);
+		cp.calculaTotalPago(a);
+				
 		System.out.println(c.toString());
 		System.out.println(m.toString());
 		System.out.println(a.toString());
+		System.out.printf("Total pago pelo plano: %.2f",cp.getTotal());
 	}
 
 }

@@ -1,9 +1,9 @@
 package exercicio1;
 
 public class ControlePagamento {
-	private int total;	
+	private double total;	
 
-	public int getTotal() {
+	public double getTotal() {
 		return total;
 	}
 	

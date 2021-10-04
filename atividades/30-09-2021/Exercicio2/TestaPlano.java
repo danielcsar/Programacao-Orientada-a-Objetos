@@ -13,11 +13,12 @@ public class TestaPlano {
 		a.calcularPagamento();
 		cp.calculaTotalPago(c);
 		cp.calculaTotalPago(m);
+		cp.calculaTotalPago(a);
 				
 		System.out.println(c.toString());
 		System.out.println(m.toString());
 		System.out.println(a.toString());
-		System.out.println("Total pago pelo plano: "+cp.getTotal());
+		System.out.printf("Total pago pelo plano: %.2f",cp.getTotal());
 	}
 
 }
