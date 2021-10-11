@@ -139,7 +139,7 @@ public class SerraflixMain {
 
 				case "Editar":
 					Object[] editArray = (Object[])serraflix.programas.toArray();
-					Object edit = JOptionPane.showInputDialog(null, "Escolha o programa para remover.", "Excluir",
+					Object edit = JOptionPane.showInputDialog(null, "Escolha o programa para remover.", "Editar",
 							JOptionPane.PLAIN_MESSAGE, null, editArray, editArray[0]);
 					Programa e = (Programa)edit;
 					
@@ -195,6 +195,7 @@ public class SerraflixMain {
 					Object[] classifArray = (Object[])serraflix.programas.toArray();
 					Object classificacao = JOptionPane.showInputDialog(null, "Escolha o programa para classificar.", "Classificar",
 							JOptionPane.PLAIN_MESSAGE, null, classifArray, classifArray[0]);
+					if (classificacao == null) {break;};
 					Programa c = (Programa)classificacao;
 					
 					String numTemp = JOptionPane.showInputDialog("Digite a classificação:");
