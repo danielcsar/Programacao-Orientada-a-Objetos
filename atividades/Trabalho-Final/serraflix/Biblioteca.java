@@ -47,15 +47,14 @@ public class Biblioteca {
         }
     }
 
-    // Verificação de CADASTRO duplicado
     public boolean seExiste(Programa programa) {
         for (Programa y : this.programas) {
             if ((Serie.class.isInstance(y)) && (y.getNome().equals(programa.nome))
                     && (y.getCategoria().equals(programa.categoria))) {
                 return true;
-            }
-            else if ((Filme.class.isInstance(y)) && (y.getNome().equals(programa.nome))) {
-                return true;
+            } else if ((Filme.class.isInstance(y)) && (y.getNome().equals(programa.nome))
+                    && (y.getCategoria().equals(programa.categoria)) && (Filme.class.equals(programa))) {
+                return false;
             }
         }
         return false;
